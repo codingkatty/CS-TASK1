@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2280%22>🌺</text></svg>" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-group">
+            <a href="#" class="logo">C</a>
+            <div class="nav-links">
+                <a href="#" class="active" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery</a>
+                <a href="#" data-page="feedback">Feedback</a>
+            </div>
+        </div>
+        <a href="https://scratch.mit.edu/users/Candy_Jess_Husky/" target="_blank" class="profile-btn">Open Profile</a>
+    </nav>
+
+    <div id="home" class="content">
+        <div class="home-content">
+            <h1 class="welcome-title">Welcome to my hut! 🎮</h1>
+            <p class="welcome-text">Explore my collection of interactive projects created with Scratch. From games to animations, discover the fun world of programming!</p>
+            
+            <div class="scroll-banner">
+                <div class="scroll-content">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/1047767535_144x108.png" alt="Homework Mech">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/1021092603_144x108.png" alt="Killer Class">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/555862894_144x108.png" alt="Mask It">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/567483869_144x108.png" alt="Dino Parallax">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/564804503_144x108.png" alt="Pastel Speed Draw">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/553132343_144x108.png" alt="Google Meet">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/1047767535_144x108.png" alt="Homework Mech">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/1021092603_144x108.png" alt="Killer Class">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/555862894_144x108.png" alt="Mask It">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/567483869_144x108.png" alt="Dino Parallax">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/564804503_144x108.png" alt="Pastel Speed Draw">
+                    <img src="https://cdn2.scratch.mit.edu/get_image/project/553132343_144x108.png" alt="Google Meet">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="content hidden">
+        <div class="gallery">
+            <div class="gallery-item" data-project="homework-mech" data-embed="https://scratch.mit.edu/projects/1047767535/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/1047767535_144x108.png" alt="Homework Mech">
+                <p>Homework Mech</p>
+            </div>
+            <div class="gallery-item" data-project="killer-class" data-embed="https://scratch.mit.edu/projects/1021092603/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/1021092603_144x108.png" alt="Killer Class">
+                <p>Killer Class</p>
+            </div>
+            <div class="gallery-item" data-project="mask-it" data-embed="https://scratch.mit.edu/projects/555862894/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/555862894_144x108.png" alt="Mask It">
+                <p>Mask It</p>
+            </div>
+            <div class="gallery-item" data-project="dino-parallax" data-embed="https://scratch.mit.edu/projects/567483869/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/567483869_144x108.png" alt="Dino Parallax">
+                <p>Dino Parallax</p>
+            </div>
+            <div class="gallery-item" data-project="pastel-speed-draw" data-embed="https://scratch.mit.edu/projects/564804503/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/564804503_144x108.png" alt="Pastel Speed Draw">
+                <p>Pastel Speed Draw</p>
+            </div>
+            <div class="gallery-item" data-project="google-meet" data-embed="https://scratch.mit.edu/projects/553132343/embed">
+                <img src="https://cdn2.scratch.mit.edu/get_image/project/553132343_144x108.png" alt="Google Meet">
+                <p>Google Meet</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-page" class="content hidden project-page">
+        <iframe id="project-frame" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <br><button class="back-btn">← Back to Gallery</button>
+    </div>
+
+    <div id="feedback" class="content hidden">
+        <form class="feedback-form" action="https://formspree.io/f/xrbgkvgr" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="profile-btn">Send Feedback</button>
+        </form>
+    </div>
+
+    <div class="fullscreen-overlay">
+        <button class="close-fullscreen">×</button>
+        <iframe allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

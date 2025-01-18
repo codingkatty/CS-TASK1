@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightyellow;
+    font-family: monospace;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff69b4;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #ff69b4;
+}
+
+.profile-btn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+.profile-btn:hover {
+    background-color: #ff4da6;
+}
+
+.content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 198px;
+    height: 144px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-page {
+    text-align: center;
+    padding: 2rem;
+}
+
+#project-frame {
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.back-btn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.back-btn:hover {
+    background-color: #ff4da6;
+}
+
+.home-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.welcome-title {
+    color: #ff69b4;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.scroll-banner {
+    width: 100%;
+    height: 200px;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem 0;
+}
+
+.scroll-banner::before,
+.scroll-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.scroll-banner::before {
+    left: 0;
+    background: linear-gradient(to right, lightyellow, transparent);
+}
+
+.scroll-banner::after {
+    right: 0;
+    background: linear-gradient(to left, lightyellow, transparent);
+}
+
+.scroll-content {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    gap: 2rem;
+}
+
+.scroll-content:hover {
+    animation-play-state: paused;
+}
+
+.scroll-content img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.scroll-content img:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-overlay.active {
+    display: flex;
+}
+
+.fullscreen-overlay iframe {
+    width: 800px;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.project-description {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
